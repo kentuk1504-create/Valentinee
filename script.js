@@ -2,7 +2,7 @@
 // INDEX.HTML - HALAMAN JANTUNG
 // ======================================================
 function goGallery() {
-  window.location.href = "gallery.html";
+  window.location.href = "gallery.html"; // pastikan nama file benar
 }
 
 // Klik jantung kasih pesan

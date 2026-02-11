@@ -77,18 +77,59 @@ h1 {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
 }
-.signup-link {
-  margin-top: 15px;
-  color: #ff69b4;
+
+/* Slider Gallery */
+.gallery-container {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.slider-btn {
+  padding: 5px 15px;
+  margin: 0 10px;
   cursor: pointer;
+  font-size: 20px;
 }
 
-.error-message {
-  color: #ff1493;
-  margin-top: 10px;
+.download-btn {
+  padding: 10px 20px;
+  background: #ff69b4;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-.success-message {
-  color: #ff69b4;
-  margin-top: 10px;
+.download-btn:hover {
+  background: #ff1493;
 }

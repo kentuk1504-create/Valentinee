@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery-container">
+    <div class="gallery-container" id="gallery-content">
         <div class="gallery-header">
             <h1>💕 Untuk Deyaa Bocil 🤏🏻🤍</h1>
         </div>
@@ -40,20 +40,19 @@
         <!-- Pesan Valentine -->
         <div class="message-section">
             <p class="top-text"><strong>Selamat Hari Valentine Cantikk 🤍</strong></p>
-
             <p>Semangatt yaa buat menjalani hari-hari kamu. Apa pun yang kamu hadapi, aku selalu ada buat nemenin dan dukung kamu.</p>
             <p>Jangan lupa buat happy terus samaaa akuu yaa, karena senyum dan bahagia mu ituu adalah salah satu hal favoritku 💕</p>
             <p>Hadiah ini mungkin beda dari yang lain, tapi aku harap bisa jadi pengingat kecil kalau kamu itu spesial banget buat aku. Terima kasih sudah hadir dan jadi bagian penting di hidupku.</p>
-
-            <p class="bottom-text"><strong>  I will love you now, tomorrow and Forever 🤍🌹</strong></p>
-            
-            <p class="from-text">  From ~ Kak Memeng 🤍</p>
+            <p class="bottom-text"><strong>I will love you now, tomorrow and Forever 🤍🌹</strong></p>
+            <p class="from-text">From ~ Kak Memeng 🤍</p>
         </div>
-        
 
+        <!-- Tombol download PDF -->
         <button class="download-btn" onclick="downloadAsPDF()">📥 Download sebagai PDF</button>
     </div>
 
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Valentine 💕</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Valentine 💕</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery-container" id="gallery-content">
-        <div class="gallery-header">
-            <h1>💕 happy valentine kesayangan aku 🤍🤍</h1>
-        </div>
 
-        <!-- Slider -->
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image1.jpg" alt="Foto 1">
-                </div>
-                <div class="slide">
-                    <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image2.jpg" alt="Foto 2">
-                </div>
-                <div class="slide">
-                    <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image3.jpg" alt="Foto 3">
-                </div>
-                <div class="slide">
-                    <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image4.jpg" alt="Foto 4">
-                </div>
-            </div>
+<div class="gallery-container" id="gallery-content">
 
-            <!-- Kontrol slider -->
-            <div class="slider-controls">
-                <button class="slider-btn" onclick="prevSlide()">❮</button>
-                <span class="slide-counter">1 / 4</span>
-                <button class="slider-btn" onclick="nextSlide()">❯</button>
-            </div>
-        </div>
+  <div class="gallery-header">
+    <h1>💕 Untuk Deyaa Bocil 🤏🏻🤍</h1>
+  </div>
 
-        <!-- Pesan Valentine -->
-        <div class="message-section">
-            <p class="top-text"><strong>Selamat Hari Valentine Cantikk 🤍</strong></p>
-            <p>Haiii Cantikkku Semangatt yaa buat menjalani hari-hari kamu. Apa pun yang kamu hadapi, aku selalu ada buat nemenin dan dukung kamu.</p>
-            <p>Jangan lupa buat happy terus samaaa akuu yaa, karena senyum dan bahagia mu ituu adalah salah satu hal favoritku 💕</p>
-            <p>Hadiah ini mungkin beda dari yang lain, tapi aku harap bisa jadi pengingat kecil kalau kamu itu spesial banget buat aku. Terima kasih sudah hadir dan jadi bagian penting di hidupku.</p>
-            <p class="bottom-text"><strong>I will love you now, tomorrow and Forever 🤍🌹</strong></p>
-            <p class="from-text">From ~ Kak Memeng 🤍</p>
-        </div>
-
-        <!-- Tombol download PDF -->
-        <button class="download-btn" onclick="downloadAsPDF()">📥 Download sebagai PDF</button>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide active">
+        <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image1.jpg" alt="Foto 1">
+      </div>
+      <div class="slide">
+        <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image2.jpg" alt="Foto 2">
+      </div>
+      <div class="slide">
+        <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image3.jpg" alt="Foto 3">
+      </div>
+      <div class="slide">
+        <img src="https://raw.githubusercontent.com/gusmangaditya/valentine/main/image/image4.jpg" alt="Foto 4">
+      </div>
     </div>
 
-    <!-- jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="script.js"></script>
+    <div class="slider-controls">
+      <button class="slider-btn" onclick="prevSlide()">❮</button>
+      <span class="slide-counter">1 / 4</span>
+      <button class="slider-btn" onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+
+  <div class="message-section">
+    <p class="top-text">Selamat Hari Valentine Cantikk 🤍</p>
+    <p>Semangatt yaa buat menjalani hari-hari kamu. Apa pun yang kamu hadapi, aku selalu ada buat nemenin dan dukung kamu.</p>
+    <p>Jangan lupa buat happy terus samaaa akuu yaa, karena senyum dan bahagia mu ituu adalah salah satu hal favoritku 💕</p>
+    <p>Hadiah ini mungkin beda dari yang lain, tapi aku harap bisa jadi pengingat kecil kalau kamu itu spesial banget buat aku. Terima kasih sudah hadir dan jadi bagian penting di hidupku.</p>
+    <p class="bottom-text">I will love you now, tomorrow and Forever 🤍🌹</p>
+    <p class="from-text">From ~ Kak Memeng 🤍</p>
+  </div>
+
+  <button class="download-btn" onclick="downloadAsPDF()">📥 Download sebagai PDF</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

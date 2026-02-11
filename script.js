@@ -1,6 +1,6 @@
-// ======================
-// HALAMAN PERTAMA (INDEX)
-// ======================
+// ======================================================
+// INDEX.HTML - HALAMAN JANTUNG
+// ======================================================
 function goGallery() {
   window.location.href = "gallery.html";
 }
@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-// ======================
-// SLIDER GALLERY
-// ======================
+// ======================================================
+// SLIDER GALLERY.HTML
+// ======================================================
 let currentSlide = 0;
 let slides;
 let counter;
@@ -51,10 +50,9 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-
-// ======================
-// DOWNLOAD PDF (SIMPLE)
-// ======================
+// ======================================================
+// DOWNLOAD PDF (dummy alert)
+// ======================================================
 function downloadAsPDF() {
-  alert("Untuk download PDF butuh library tambahan. Kalau mau, aku bikinin versi auto jadi PDF 😎");
+  alert("Download PDF masih basic. Kalau mau, aku bisa bikin versi asli 😎");
 }

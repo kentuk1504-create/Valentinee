@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine 🤍</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentinee - Login</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="heart-container">
-            <svg class="heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50,85 C20,70 5,55 5,40 C5,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 95,25 95,40 C95,55 80,70 50,85 Z" fill="#FFB6D9"/>
-            </svg>
-            <div class="heart-text">
-                <h1>Happy Valentine</h1>
-                <p>cantikku 🤍</p>
-            </div>
-        </div>
-        <button class="click-btn" onclick="goToGallery()">KLIK 💕</button>
+  <div class="login-container">
+
+    <!-- JANTUNG VALENTINE -->
+    <div class="heart-container" id="valentineHeart">
+      <div class="heart-text">
+        ❤️
+        <span>Happy Valentine<br>Cantikku 🤍</span>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <button class="valentine-btn" onclick="showValentine()">Klik Aku 💖</button>
+
+    <h1>Valentinee</h1>
+    
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    
+    <p class="signup-link" onclick="goToSignup()">Belum punya akun? <strong>Daftar di sini</strong></p>
+    <div id="message"></div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

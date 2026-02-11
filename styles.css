@@ -1,182 +1,149 @@
-/* RESET & GLOBAL */
+/* Reset & dasar */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ffc0cb 0%, #ffffff 100%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffc0cb 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
 }
 
-/* LOGIN CONTAINER */
-.login-container {
-  background: linear-gradient(135deg, #ffb6d9 0%, #ffffff 50%, #ffc0cb 100%);
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-  text-align: center;
-  width: 100%;
-  max-width: 350px;
-}
-
-/* JANTUNG BESAR */
-.heart-container {
-  font-size: 120px;
-  margin-bottom: 15px;
-  animation: heartbeat 1.2s infinite;
-}
-
-.heart-text {
-  position: relative;
-  display: inline-block;
-}
-
-.heart-text span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
-}
-
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-h1 {
-  color: #ff69b4;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-/* TOMBOL MASUK */
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #ff69b4 0%, #ffb6d9 100%);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: 0.3s;
-}
-
-.login-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
-}
-
-/* ======================================================
-   GALLERY CONTAINER
-====================================================== */
+/* Container gallery */
 .gallery-container {
-  width: 100%;
-  max-width: 360px;  /* cocok HP */
-  margin: 10px auto;
-  text-align: center;
-  padding: 10px;
+    width: 95%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #ffb6d9 0%, #ffffff 50%, #ffc0cb 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(255,105,180,0.3);
+    padding: 20px;
+    text-align: center;
 }
 
-/* SLIDER */
+/* Header */
+.gallery-header h1 {
+    color: #ff69b4;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Slider */
 .slider-container {
-  position: relative;
-  overflow: hidden;
-  margin: 10px 0;
-  border-radius: 15px;
-  background: #ffe6f0; /* warna background saat foto portrait */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  display: none;
-  text-align: center;
-  padding: 10px; /* biar portrait ada ruang */
-}
-
-.slide.active {
-  display: block;
+    min-width: 100%;
 }
 
 .slide img {
-  width: 100%;
-  height: auto;        /* proporsional, tidak crop */
-  max-height: 400px;   /* tidak terlalu tinggi di HP */
-  object-fit: contain;  /* semua foto full terlihat */
-  border-radius: 10px;
-  background: #ffe6f0;  /* portrait ada background cantik */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    object-fit: contain; /* biar foto full, tidak crop */
 }
 
-/* SLIDER CONTROLS */
+/* Kontrol slider */
 .slider-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .slider-btn {
-  padding: 5px 12px;
-  margin: 0 8px;
-  cursor: pointer;
-  font-size: 18px;
-  background: #ffb6d9;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  transition: 0.3s;
+    background: #ff69b4;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .slider-btn:hover {
-  background: #ff69b4;
-  transform: scale(1.05);
+    background: #ff1493;
 }
 
-/* DOWNLOAD BUTTON */
+/* Message Section */
+.message-section {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.message-section .top-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 25px 0;
+}
+
+.message-section p {
+    text-align: left; /* paragraf biasa */
+    margin-bottom: 10px;
+}
+
+.message-section .bottom-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+}
+
+.message-section .from-text {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #ff69b4;
+    margin-top: 10px;
+}
+
+/* Download button */
 .download-btn {
-  padding: 8px 18px;
-  background: #ff69b4;
-  border: none;
-  border-radius: 18px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: 0.3s;
+    padding: 12px 20px;
+    border: none;
+    background: #ff69b4;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
 }
 
 .download-btn:hover {
-  background: #ff1493;
-  transform: scale(1.05);
+    background: #ff1493;
 }
 
-/* MESSAGE SECTION */
-.message-section {
-  margin-top: 15px;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #333;
+/* Responsive HP */
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        padding: 15px;
+    }
+    .gallery-header h1 {
+        font-size: 18px;
+    }
+    .message-section .top-text {
+        font-size: 16px;
+    }
+    .message-section .bottom-text {
+        font-size: 15px;
+    }
 }

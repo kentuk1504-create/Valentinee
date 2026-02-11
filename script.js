@@ -1,18 +1,24 @@
-// ===== INDEX.HTML =====
+// ========================
+// LOGIN PAGE
+// ========================
 function goGallery() {
   window.location.href = "gallery.html";
 }
 
+// Klik jantung kasih pesan
 document.addEventListener("DOMContentLoaded", function () {
   const heart = document.querySelector(".heart-container");
   if (heart) {
+    heart.style.cursor = "pointer";
     heart.addEventListener("click", function () {
       alert("Happy Valentine Cantikku 🤍 Aku sayang kamu 💕");
     });
   }
 });
 
-// ===== GALLERY SLIDER =====
+// ========================
+// GALLERY SLIDER
+// ========================
 let currentSlide = 0;
 let slides;
 let counter;
@@ -20,13 +26,17 @@ let counter;
 document.addEventListener("DOMContentLoaded", function () {
   slides = document.querySelectorAll(".slide");
   counter = document.querySelector(".slide-counter");
-  if (slides.length > 0) showSlide(currentSlide);
+  if (slides.length > 0) {
+    showSlide(currentSlide);
+  }
 });
 
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
-  if (counter) counter.textContent = (index + 1) + " / " + slides.length;
+  if (counter) {
+    counter.textContent = (index + 1) + " / " + slides.length;
+  }
 }
 
 function nextSlide() {
@@ -39,19 +49,14 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// ===== DOWNLOAD PDF =====
+// ========================
+// DOWNLOAD PDF (basic)
+// ========================
 function downloadAsPDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-
-  const content = document.getElementById("gallery-content");
-  doc.html(content, {
-    callback: function (doc) {
-      doc.save("Valentine.pdf");
-    },
-    x: 10,
-    y: 10,
-    width: 190,
-    windowWidth: content.scrollWidth
-  });
+  const element = document.createElement('a');
+  const content = document.querySelector('.gallery-container').innerText;
+  const blob = new Blob([content], {type: 'text/plain'});
+  element.href = URL.createObjectURL(blob);
+  element.download = "Valentine_Message.txt";
+  element.click();
 }

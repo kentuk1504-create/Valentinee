@@ -51,8 +51,22 @@ function prevSlide() {
 }
 
 // ======================================================
-// DOWNLOAD PDF (dummy alert)
+// DOWNLOAD PDF (pakai jsPDF)
 // ======================================================
 function downloadAsPDF() {
-  alert("Download PDF masih basic. Kalau mau, aku bisa bikin versi asli 😎");
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  // Ambil elemen gallery-content
+  const galleryContent = document.getElementById("gallery-content");
+
+  doc.html(galleryContent, {
+    callback: function (doc) {
+      doc.save("Valentine.pdf");
+    },
+    x: 10,
+    y: 10,
+    width: 190, // lebarnya di PDF
+    windowWidth: galleryContent.scrollWidth
+  });
 }

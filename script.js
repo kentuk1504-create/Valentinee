@@ -1,24 +1,18 @@
-// ======================================================
-// INDEX.HTML - HALAMAN JANTUNG
-// ======================================================
+// ===== INDEX.HTML =====
 function goGallery() {
-  window.location.href = "gallery.html"; // pastikan nama file benar
+  window.location.href = "gallery.html";
 }
 
-// Klik jantung kasih pesan
 document.addEventListener("DOMContentLoaded", function () {
   const heart = document.querySelector(".heart-container");
   if (heart) {
-    heart.style.cursor = "pointer";
     heart.addEventListener("click", function () {
       alert("Happy Valentine Cantikku 🤍 Aku sayang kamu 💕");
     });
   }
 });
 
-// ======================================================
-// SLIDER GALLERY.HTML
-// ======================================================
+// ===== GALLERY SLIDER =====
 let currentSlide = 0;
 let slides;
 let counter;
@@ -26,18 +20,13 @@ let counter;
 document.addEventListener("DOMContentLoaded", function () {
   slides = document.querySelectorAll(".slide");
   counter = document.querySelector(".slide-counter");
-
-  if (slides.length > 0) {
-    showSlide(currentSlide);
-  }
+  if (slides.length > 0) showSlide(currentSlide);
 });
 
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
-  if (counter) {
-    counter.textContent = (index + 1) + " / " + slides.length;
-  }
+  if (counter) counter.textContent = (index + 1) + " / " + slides.length;
 }
 
 function nextSlide() {
@@ -50,23 +39,19 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// ======================================================
-// DOWNLOAD PDF (pakai jsPDF)
-// ======================================================
+// ===== DOWNLOAD PDF =====
 function downloadAsPDF() {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
 
-  // Ambil elemen gallery-content
-  const galleryContent = document.getElementById("gallery-content");
-
-  doc.html(galleryContent, {
+  const content = document.getElementById("gallery-content");
+  doc.html(content, {
     callback: function (doc) {
       doc.save("Valentine.pdf");
     },
     x: 10,
     y: 10,
-    width: 190, // lebarnya di PDF
-    windowWidth: galleryContent.scrollWidth
+    width: 190,
+    windowWidth: content.scrollWidth
   });
 }

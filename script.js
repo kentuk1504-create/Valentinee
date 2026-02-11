@@ -1,25 +1,15 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+
   const messageDiv = document.getElementById('message');
-  
-  if (!email || !password) {
-    messageDiv.innerHTML = '<div class="error-message">Semua field harus diisi!</div>';
-    return;
-  }
-  
-  if (email.length < 5) {
-    messageDiv.innerHTML = '<div class="error-message">Email tidak valid!</div>';
-    return;
-  }
-  
+
+  // Pesan login
   messageDiv.innerHTML = '<div class="success-message">Login berhasil! ❤️</div>';
-  
+
+  // Langsung redirect ke gallery
   setTimeout(() => {
     window.location.href = 'gallery.html';
-  }, 2000);
+  }, 1000);
 });
 
 function goToSignup() {

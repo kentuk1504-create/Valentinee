@@ -60,26 +60,6 @@ h1 {
   font-size: 28px;
 }
 
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  color: #ff69b4;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ffb6d9;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
 .login-btn {
   width: 100%;
   padding: 12px;
@@ -93,24 +73,10 @@ input {
   margin-top: 15px;
 }
 
-/* TOMBOL VALENTINE */
-.valentine-btn {
-  padding: 10px 20px;
-  background: #ff69b4;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: 0.3s;
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
 }
-
-.valentine-btn:hover {
-  background: #ff1493;
-  transform: scale(1.05);
-}
-
 .signup-link {
   margin-top: 15px;
   color: #ff69b4;
